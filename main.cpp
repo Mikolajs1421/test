@@ -81,7 +81,7 @@ int main() {
 
     Node* result = nullptr;
     for (Node* temp = list.getHead(); temp != nullptr; temp = temp->next) {
-        if (temp->value == 2) {
+        if (temp->value == 0) {
             result = temp;
             break;
         }
@@ -89,9 +89,9 @@ int main() {
 
 
     if (result != nullptr) {
-        cout << "Znaleziono wzel z wartoscia 2: " << result->value << endl;
+        cout << "Znaleziono wzel z wartoscia: " << result->value << endl;
     }else{
-        cout << "Wezel z wartoscia 2 nie zostalznaleziony" << endl;
+        cout << "Wezel z wartoscia nie zostalznaleziony" << endl;
     }
 
     return 0;
