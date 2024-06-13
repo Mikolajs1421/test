@@ -8,12 +8,12 @@ class Node {
 
     Node() {
         value =0;
-        next = nullptr
+        next = nullptr;
     }
 
     Node(int val){
         value = val;
-        next = nullptr
+        next = nullptr;
     }
 };
 
@@ -55,13 +55,18 @@ class LinkedList {
         Node* search(int value){
             Node* temp = head;
             while (temp != nullptr) {
-                if (temp != nullptr) {
+                if (temp->value == value) {
                     return temp;
                 }
                 temp = temp->next;
             }
             return nullptr;
         }
+    
+    Node* getHead() {
+        return head;
+    }
+
 };
 
 int main() {
@@ -70,10 +75,12 @@ int main() {
     list.add(new Node(1));
     list.add(new Node(2));
     list.add(new Node(3));
-
+    list.add(new Node(7));
+    list.add(new Node(8));
+    list.add(new Node(12));
 
     Node* result = nullptr;
-    for (Node* temp = list.head; temp != nullptr; temp = temp->next) {
+    for (Node* temp = list.getHead(); temp != nullptr; temp = temp->next) {
         if (temp->value == 2) {
             result = temp;
             break;
