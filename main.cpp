@@ -65,7 +65,7 @@ class LinkedList {
 };
 
 int main() {
-    LinkedList lista;
+    LinkedList list;
 
     list.add(new Node(1));
     list.add(new Node(2));
